@@ -13,7 +13,7 @@ function Timeline() {
   // const [data, setData] = useState(false);
 
   const items = [{
-    cardDetailedText: 'Men of the British Expeditionary Force (BEF) wade out to..',
+    cardDetailedText: ['The growing presence of artificial intelligence (AI) in consumers’ lives has put our societies at a crossroads, said UNCTAD Secretary-General Rebeca Grynspan, marking World Consumer Rights Day on 15 March.'],
     cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
     cardTitle: 'Dunkirk',
     media: {
@@ -24,7 +24,7 @@ function Timeline() {
     },
     title: 'May 1940'
   }, {
-    cardDetailedText: 'Men of the British Expeditionary Force (BEF) wade out to..',
+    cardDetailedText: ['The growing presence of artificial intelligence (AI) in consumers’ lives has put our societies at a crossroads, said UNCTAD Secretary-General Rebeca Grynspan, marking World Consumer Rights Day on 15 March.', 'The growing presence of artificial intelligence (AI) in consumers’ lives has put our societies at a crossroads, said UNCTAD Secretary-General Rebeca Grynspan, marking World Consumer Rights Day on 15 March.'],
     cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
     cardTitle: 'Dunkirk',
     media: {
@@ -35,7 +35,7 @@ function Timeline() {
     },
     title: 'May 1940'
   }, {
-    cardDetailedText: 'Men of the British Expeditionary Force (BEF) wade out to..',
+    cardDetailedText: ['Men of the British Expeditionary Force (BEF) wade out to..'],
     cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
     cardTitle: 'Dunkirk',
     media: {
@@ -48,7 +48,7 @@ function Timeline() {
   }, {
     cardTitle: 'Dunkirk',
     cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
-    cardDetailedText: 'Men of the British Expeditionary Force (BEF) wade out to..',
+    cardDetailedText: ['Men of the British Expeditionary Force (BEF) wade out to..'],
     media: {
       type: 'IMAGE',
       source: {
@@ -57,7 +57,7 @@ function Timeline() {
     },
     title: 'May 1940'
   }, {
-    cardDetailedText: 'Men of the British Expeditionary Force (BEF) wade out to..',
+    cardDetailedText: ['Men of the British Expeditionary Force (BEF) wade out to..'],
     cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
     cardTitle: 'Dunkirk',
     media: {
@@ -89,7 +89,7 @@ function Timeline() {
           disableToolbar
           fontSizes={{
             cardSubtitle: '16px',
-            cardText: '40px',
+            cardText: '16px',
             cardTitle: '24px',
             title: '24px',
           }}
