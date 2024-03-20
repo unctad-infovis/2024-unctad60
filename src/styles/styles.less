@@ -1,7 +1,36 @@
 @import 'colors.less';
 
+* {
+  box-sizing: border-box;
+}
 .app-root-2024-unctad60 .app {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  .full_width_container {
+    margin: auto auto 20px auto;
+    width: 800px;
+    iframe {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+    }
+    h1 {
+      color: #000;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0.25rem 0 0.5rem 15px;
+      text-align: center;
+      width: 95%;
+    }
+    h2 {
+      color: #000;
+      font-size: 16px;
+      font-weight: 600;
+      max-width: 700px;
+      margin: 0;
+      padding: 0.5rem auto 0.5rem auto;
+      text-align: left;
+      width: 97%;
+    }
+  }
   @import 'timeline.less';
 }
 

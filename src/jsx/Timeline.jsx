@@ -6,6 +6,8 @@ import '../styles/styles.less';
 // import roundNr from './helpers/RoundNr.js';
 
 // const appID = '#app-root-2024-unctad60';
+
+// https://github.com/prabhuignoto/react-chrono
 import { Chrono } from 'react-chrono';
 
 function Timeline() {
@@ -35,27 +37,27 @@ function Timeline() {
     },
     title: 'May 1940'
   }, {
-    cardDetailedText: ['Men of the British Expeditionary Force (BEF) wade out to..'],
-    cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
-    cardTitle: 'Dunkirk',
+    title: '7 December 1941',
+    cardTitle: 'Pearl Harbor',
     media: {
-      type: 'IMAGE',
       source: {
-        url: './assets/img/unctad2024.jpg'
-      }
-    },
-    title: 'May 1940',
+        url: 'https://www.youtube.com/embed/f6cz9gtMTeI',
+        type: 'mp4'
+      },
+      type: 'VIDEO',
+      name: 'Pearl Harbor'
+    }
   }, {
-    cardTitle: 'Dunkirk',
-    cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
-    cardDetailedText: ['Men of the British Expeditionary Force (BEF) wade out to..'],
+    title: '7 December 1941',
+    cardTitle: 'Pearl Harbor',
     media: {
-      type: 'IMAGE',
       source: {
-        url: './assets/img/unctad2024.jpg'
-      }
-    },
-    title: 'May 1940'
+        url: 'https://storage.unctad.org/2024-navigating_troubled_waters/assets/vid/2024-navigating_troubled_waters_video.mp4',
+        type: 'mp4'
+      },
+      type: 'VIDEO',
+      name: 'Pearl Harbor'
+    }
   }, {
     cardDetailedText: ['Men of the British Expeditionary Force (BEF) wade out to..'],
     cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
@@ -66,6 +68,10 @@ function Timeline() {
         url: './assets/img/unctad2024.jpg'
       }
     },
+    items: [
+      { cardTitle: 'nested card title 1' },
+      { cardTitle: 'nested card title 2' },
+    ],
     title: 'May 1940'
   }];
 
@@ -83,9 +89,8 @@ function Timeline() {
       <div className="timeline_container">
         <Chrono
           activeItemIndex={false}
-          disableInteraction
-          lineWidth={5}
           disableClickOnCircle
+          disableInteraction
           disableToolbar
           fontSizes={{
             cardSubtitle: '16px',
@@ -94,6 +99,8 @@ function Timeline() {
             title: '24px',
           }}
           items={items}
+          lineWidth={5}
+          mediaSettings={{ fit: 'contain' }}
           mode="VERTICAL_ALTERNATING"
           theme={{
             cardBgColor: '#EBEAE6',
@@ -104,11 +111,58 @@ function Timeline() {
             titleColor: '#000',
             titleColorActive: '#000',
           }}
-        />
+        >
+          <div className="chrono-icons">
+            <img src="./assets/img/france-flag-round-circle-icon.svg" alt="image1" />
+            <img src="./assets/img/uzbekistan-flag-round-circle-icon.svg" alt="image2" />
+            <img src="./assets/img/france-flag-round-circle-icon.svg" alt="image3" />
+            <img src="./assets/img/uzbekistan-flag-round-circle-icon.svg" alt="image4" />
+            <img src="./assets/img/uzbekistan-flag-round-circle-icon.svg" alt="image4" />
+          </div>
+        </Chrono>
+      </div>
+      <div className="full_width_container">
+        <h1>Dunkirk</h1>
+        <iframe frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/f6cz9gtMTeI?enablejsapi=1" title="Pearl Harbor" className="IFrameVideo-sc-1yk7mm5-5 kGwZaZ" />
+        <h2>The growing presence of artificial intelligence (AI) in consumers’ lives has put our societies at a crossroads, said UNCTAD Secretary-General Rebeca Grynspan, marking World Consumer Rights Day on 15 March.</h2>
+      </div>
+      <div className="timeline_container">
+        <Chrono
+          activeItemIndex={false}
+          disableClickOnCircle
+          disableInteraction
+          disableToolbar
+          fontSizes={{
+            cardSubtitle: '16px',
+            cardText: '16px',
+            cardTitle: '24px',
+            title: '24px',
+          }}
+          items={items}
+          lineWidth={5}
+          mediaSettings={{ fit: 'contain' }}
+          mode="VERTICAL_ALTERNATING"
+          theme={{
+            cardBgColor: '#EBEAE6',
+            cardMediaBgColor: '#EBEAE6',
+            cardTitleColor: '#000',
+            primary: '#009edb',
+            secondary: '#ffc800',
+            titleColor: '#000',
+            titleColorActive: '#000',
+          }}
+        >
+          <div className="chrono-icons">
+            <img src="./assets/img/france-flag-round-circle-icon.svg" alt="image1" />
+            <img src="./assets/img/uzbekistan-flag-round-circle-icon.svg" alt="image2" />
+            <img src="./assets/img/france-flag-round-circle-icon.svg" alt="image3" />
+            <img src="./assets/img/uzbekistan-flag-round-circle-icon.svg" alt="image4" />
+            <img src="./assets/img/uzbekistan-flag-round-circle-icon.svg" alt="image4" />
+          </div>
+        </Chrono>
       </div>
       <div className="timeline_header">2024</div>
       <noscript>Your browser does not support JavaScript!</noscript>
-
     </div>
   );
 }
