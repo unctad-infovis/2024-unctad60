@@ -15,16 +15,16 @@ function Timeline() {
   // const [data, setData] = useState(false);
 
   const items = [{
-    cardDetailedText: ['The growing presence of artificial intelligence (AI) in consumers’ lives has put our societies at a crossroads, said UNCTAD Secretary-General Rebeca Grynspan, marking World Consumer Rights Day on 15 March.'],
-    cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
-    cardTitle: 'Dunkirk',
+    cardDetailedText: ['At the time it was the largest international conference ever held, with more than 4,000 delegates from 119 countries and observers from civil society organizations. A scene of global bargaining between rich and poor countries. By the end of UNCTAD I, from March to June 1964, a declaration by 77 developing countries - the Group of 77 - signalled a new negotiating body that pooled common concerns.', 'The United Nations General Assembly adopted resolution 1995 (XIX) in December of that year, UNCTAD was born. A permanent body within the United Nations that has since functioned as the system\'s focal point for the integrated treatment of trade and development in support of developing countries.'],
+    cardSubtitle: '',
+    cardTitle: 'First Geneva Conference, 1964',
     media: {
       type: 'IMAGE',
       source: {
         url: './assets/img/unctad1964.jpg'
       }
     },
-    title: 'May 1940'
+    title: '1964'
   }, {
     cardDetailedText: ['The growing presence of artificial intelligence (AI) in consumers’ lives has put our societies at a crossroads, said UNCTAD Secretary-General Rebeca Grynspan, marking World Consumer Rights Day on 15 March.', 'The growing presence of artificial intelligence (AI) in consumers’ lives has put our societies at a crossroads, said UNCTAD Secretary-General Rebeca Grynspan, marking World Consumer Rights Day on 15 March.'],
     cardSubtitle: 'Men of the British Expeditionary Force (BEF) wade out to..',
