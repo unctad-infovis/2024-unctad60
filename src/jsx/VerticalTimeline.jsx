@@ -24,7 +24,7 @@ function Timeline() {
         url: './assets/img/unctad1964.jpg'
       }
     },
-    title: '23 March - 16 June 1964'
+    title: '23 March – 16 June 1964'
   }, {
     cardDetailedText: ['The G77 have since increased to a coalition of 134 developing countries, but retaining the original name due to its historic significance.'],
     cardSubtitle: '',
@@ -310,7 +310,7 @@ function Timeline() {
         url: 'https://dummyimage.com/400/ccc/fff&text=placeholder'
       }
     },
-    title: '27 April - 11 May 1996'
+    title: '27 April – 11 May 1996'
   }, {
     cardDetailedText: ['UNCTAD redoubles efforts to help developing countries actively participate in multilateral negotiations to join the newly founded World Trade Organization.'],
     cardSubtitle: '',
@@ -376,7 +376,7 @@ function Timeline() {
         url: 'https://dummyimage.com/400/ccc/fff&text=placeholder'
       }
     },
-    title: '19 - 25 April 2008 '
+    title: '19 – 25 April 2008 '
   }, {
     cardDetailedText: ['Launched at UNCTAD XII, the cluster comprises 15 UN agencies including UNCTAD. The cluster contributes to UN system-wide coherence reform, coordinating operations at global, regional and country levels, and accessing innovative multi-donor funding mechanisms.', '<span class="right"><strong>Further reading</strong><br /><a href="https://unctad.org/osg/former-secretaries-general-and-officers-charge/supachai-panitchpakdi">UN Inter-Agency Cluster on Trade and Productive Capacity</a></span>'],
     cardSubtitle: '',
@@ -453,7 +453,7 @@ function Timeline() {
         url: 'https://dummyimage.com/400/ccc/fff&text=placeholder'
       }
     },
-    title: '03 - 07 October 2021'
+    title: '03 – 07 October 2021'
   }, {
     cardDetailedText: ['The strategic move kick-starts the organization’s 60th anniversary celebration set for 12-14 June 2024. It also aims to better reflect the entity’s work, values and renewed commitment to advocate for developing countries amid the evolving global economic landscape.', '<span class="right"><strong>Further reading</strong><br /><a href="https://unctad.org/news/unctad-rebrands-un-trade-and-development">UN Trade and Development (UNCTAD)</a></span>'],
     cardSubtitle: '',

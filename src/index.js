@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createRoot } from 'react-dom/client';
 
-import Timeline from './jsx/Timeline.jsx';
+import Timeline from './jsx/HorizontalTimeline.jsx';
 
 const container = document.getElementById('app-root-2024-unctad60-timeline');
 const root = createRoot(container);

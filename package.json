@@ -43,6 +43,8 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "react-chrono": "^2.6.0"
+    "react-chrono": "^2.6.0",
+    "react-circle-flags": "^0.0.20",
+    "swiper": "^9.4.1"
   }
 }
