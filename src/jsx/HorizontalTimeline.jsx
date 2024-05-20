@@ -117,7 +117,7 @@ function Timeline() {
             spaceBetween={0}
             style={{
               '--swiper-pagination-color': '#009edb',
-              '--swiper-pagination-progressbar-bg-color': '#ded9d5',
+              '--swiper-pagination-progressbar-bg-color': '#c5dfef',
               '--swiper-pagination-progressbar-size': '10px'
             }}
           >
@@ -126,19 +126,23 @@ function Timeline() {
                 <div className="slider_container">
                   {
                     el.type === 'image/text' && (
-                      el.img && (
-                        <div className="content_container ">
-                          <div className="date_container">
-                            {el.country && <CircleFlag countryCode={el.country} height="30" />}
-                            {el.date}
-                          </div>
-                          <div className="image_container image_container_with_arrow">
+                    <div className="content_container ">
+                      <div className="date_container">
+                        {el.country && <CircleFlag countryCode={el.country} height="40" />}
+                        {el.date}
+                      </div>
+                      <div className="image_container image_container_with_arrow">
+                        {
+                          el.img ? (
                             <img className="img" src={`${baseUrl}assets/img/horizontal_timeline/${el.img}`} alt="" loading="lazy" />
-                            <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
-                          </div>
-                          <p>{el.text}</p>
-                        </div>
-                      )
+                          ) : (
+                            <img className="img" src="https://dummyimage.com/640x480/f4f9fd/000&text=placeholder" alt="" loading="lazy" />
+                          )
+                        }
+                        <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                      </div>
+                      <p>{el.text}</p>
+                    </div>
                     )
                   }
                   {
