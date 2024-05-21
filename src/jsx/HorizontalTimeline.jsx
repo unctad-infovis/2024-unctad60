@@ -65,17 +65,17 @@ function Timeline() {
       document.querySelector('.next_slide').classList.remove('not_active');
     }
     document.querySelectorAll('.decade').forEach(el => el.classList.remove('active'));
-    if (s.activeIndex < 13) {
+    if (s.activeIndex < 12) {
       document.querySelector('.decade_1964').classList.add('active');
-    } else if (s.activeIndex >= 13 && s.activeIndex < 23) {
+    } else if (s.activeIndex >= 12 && s.activeIndex < 22) {
       document.querySelector('.decade_1974').classList.add('active');
-    } else if (s.activeIndex >= 23 && s.activeIndex < 32) {
+    } else if (s.activeIndex >= 22 && s.activeIndex < 31) {
       document.querySelector('.decade_1984').classList.add('active');
-    } else if (s.activeIndex >= 32 && s.activeIndex < 41) {
+    } else if (s.activeIndex >= 31 && s.activeIndex < 40) {
       document.querySelector('.decade_1994').classList.add('active');
-    } else if (s.activeIndex >= 41 && s.activeIndex < 54) {
+    } else if (s.activeIndex >= 40 && s.activeIndex < 53) {
       document.querySelector('.decade_2004').classList.add('active');
-    } else if (s.activeIndex >= 54) {
+    } else if (s.activeIndex >= 53) {
       document.querySelector('.decade_2014').classList.add('active');
     }
   };
@@ -91,11 +91,11 @@ function Timeline() {
         </div>
         <div className="button_container">
           <button type="button" onClick={() => swiper.slideTo(0)} className="decade decade_1964 active" aria-label="">1964–1973</button>
-          <button type="button" onClick={() => swiper.slideTo(13)} className="decade decade_1974" aria-label="">1974–1983</button>
-          <button type="button" onClick={() => swiper.slideTo(23)} className="decade decade_1984" aria-label="">1984–1993</button>
-          <button type="button" onClick={() => swiper.slideTo(32)} className="decade decade_1994" aria-label="">1994–2003</button>
-          <button type="button" onClick={() => swiper.slideTo(41)} className="decade decade_2004" aria-label="">2004–2013</button>
-          <button type="button" onClick={() => swiper.slideTo(54)} className="decade decade_2014" aria-label="">2014–present</button>
+          <button type="button" onClick={() => swiper.slideTo(12)} className="decade decade_1974" aria-label="">1974–1983</button>
+          <button type="button" onClick={() => swiper.slideTo(22)} className="decade decade_1984" aria-label="">1984–1993</button>
+          <button type="button" onClick={() => swiper.slideTo(31)} className="decade decade_1994" aria-label="">1994–2003</button>
+          <button type="button" onClick={() => swiper.slideTo(40)} className="decade decade_2004" aria-label="">2004–2013</button>
+          <button type="button" onClick={() => swiper.slideTo(53)} className="decade decade_2014" aria-label="">2014–present</button>
         </div>
       </div>
       <div className="swiper_wrapper">
@@ -169,7 +169,7 @@ function Timeline() {
                     el.type === 'cover' && (
                       <div className="content_container">
                         <div className="date_container">
-                          <Markdown>{el.text}</Markdown>
+                          {el.text}
                         </div>
                         <div className="image_container image_container_logo">
                           <img className="img" src={`${baseUrl}assets/img/unctad-logo.jpg`} alt="" loading="lazy" />
