@@ -143,10 +143,12 @@ function Timeline() {
                 <div className="slider_container">
                   {
                     el.type === 'image/text' && (
-                    <div className="content_container ">
+                    <div className="content_container">
                       <div className="date_container">
                         {el.country && <CircleFlag countryCode={el.country} height="40" />}
                         {el.date}
+                        {' '}
+                        {el.id}
                       </div>
                       <div className="image_container image_container_with_arrow">
                         {
@@ -170,6 +172,8 @@ function Timeline() {
                       <div className="content_container">
                         <div className="date_container">
                           {el.text}
+                          {' '}
+                          {el.id}
                         </div>
                         <div className="image_container image_container_logo">
                           <img className="img" src={`${baseUrl}assets/img/unctad-logo.jpg`} alt="" loading="lazy" />
