@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/styles.less';
 
 import {
@@ -8,13 +8,16 @@ import {
 // https://v9.swiperjs.com/react
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/swiper-bundle.min.css';
+
 // https://www.npmjs.com/package/react-country-flag
 // import ReactCountryFlag from 'react-country-flag';
 
 import { CircleFlag } from 'react-circle-flags';
 
-// Import Swiper styles
-import 'swiper/swiper-bundle.min.css';
+// https://github.com/remarkjs/react-markdown
+import Markdown from 'react-markdown';
 
 // Load helpers.
 // import formatNr from './helpers/FormatNr.js';
@@ -26,6 +29,12 @@ function Timeline() {
   // Data states.
   const [data, setData] = useState(false);
   const [swiper, setSwiper] = React.useState(null);
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
 
   const baseUrl = (window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2024-unctad60/' : './';
   useEffect(() => {
@@ -94,10 +103,12 @@ function Timeline() {
           data
           && (
           <Swiper
-            // autoplay={{
-            //   delay: 3000,
-            //   disableOnInteraction: true
-            // }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: false,
+              stopOnLastSlide: true
+            }}
             grabCursor
             keyboard={{
               enabled: true
@@ -105,10 +116,15 @@ function Timeline() {
             lazy="true"
             modules={[A11y, Autoplay, Keyboard, Pagination, Mousewheel]}
             mousewheel={{
-              forceToAxis: true
+              forceToAxis: true,
+              releaseOnEdges: true
             }}
             direction="horizontal"
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
             onSlideChange={(s) => updateControls(s)}
+            onAutoplayStop={() => {
+              document.querySelector('.autoplay-progress').style.visibility = 'hidden';
+            }}
             pagination={{
               type: 'progressbar',
             }}
@@ -118,7 +134,8 @@ function Timeline() {
             style={{
               '--swiper-pagination-color': '#009edb',
               '--swiper-pagination-progressbar-bg-color': '#c5dfef',
-              '--swiper-pagination-progressbar-size': '10px'
+              '--swiper-pagination-progressbar-size': '10px',
+              '--swiper-theme-color': '#009edb'
             }}
           >
             {data && data.map(el => (
@@ -141,7 +158,10 @@ function Timeline() {
                         }
                         <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
                       </div>
-                      <p>{el.text}</p>
+                      <p>
+                        {' '}
+                        <Markdown>{el.text}</Markdown>
+                      </p>
                     </div>
                     )
                   }
@@ -149,7 +169,7 @@ function Timeline() {
                     el.type === 'cover' && (
                       <div className="content_container">
                         <div className="date_container">
-                          {el.text}
+                          <Markdown>{el.text}</Markdown>
                         </div>
                         <div className="image_container image_container_logo">
                           <img className="img" src={`${baseUrl}assets/img/unctad-logo.jpg`} alt="" loading="lazy" />
@@ -161,6 +181,12 @@ function Timeline() {
                 </div>
               </SwiperSlide>
             ))}
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle cx="24" cy="24" r="20" />
+              </svg>
+              <span ref={progressContent} />
+            </div>
           </Swiper>
           )
         }

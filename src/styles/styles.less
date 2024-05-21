@@ -1,8 +1,36 @@
 @import 'colors.less';
 
-* {
-  box-sizing: border-box;
+
+.autoplay-progress {
+  align-items: center;
+  color: var(--swiper-theme-color);
+  display: flex;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  right: 5px;
+  font-size: 12px;
+  position: absolute;
+  top: 15px;
+  width: 40px;
+  z-index: 10;
+  svg {
+    --progress: 0;
+    fill: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    stroke-dasharray: 125.6;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    top: 0px;
+    transform: rotate(-90deg);
+    width: 100%;
+    z-index: 10;
+  }
 }
+
 .app-root-2024-unctad60 .app {
   background-color: #f4f9fd;
   font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -94,6 +122,7 @@
               img {
                 height: 30px;
                 margin-right: 5px;
+                padding: 0;
                 width: 30px;
               }
             }
@@ -108,7 +137,6 @@
             }
             .image_container_logo {
               .img {
-                padding: 100px;
               }
             }
             .image_container_with_arrow {
@@ -147,6 +175,13 @@
             max-width: 400px;
             padding: 5px 10px;
             text-align: left;
+            a {
+              color: #000;
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+              }
+            }
           }
         }
       }

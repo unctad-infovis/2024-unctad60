@@ -45,6 +45,7 @@
   "dependencies": {
     "react-chrono": "^2.6.0",
     "react-circle-flags": "^0.0.20",
+    "react-markdown": "^9.0.1",
     "swiper": "^9.4.1"
   }
 }
