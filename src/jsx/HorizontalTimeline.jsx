@@ -2,11 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../styles/styles.less';
 
 import {
-  A11y, Autoplay, Keyboard, Pagination, Mousewheel
+  A11y, Keyboard, Pagination, Mousewheel
 } from 'swiper';
 
 // https://v9.swiperjs.com/react
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+// https://www.npmjs.com/package/react-is-visible
+import 'intersection-observer';
+import { useIsVisible } from 'react-is-visible';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css';
@@ -28,13 +32,11 @@ import Markdown from 'react-markdown';
 function Timeline() {
   // Data states.
   const [data, setData] = useState(false);
-  const [swiper, setSwiper] = React.useState(null);
+  const [swiper, setSwiper] = useState(null);
+  const [timer, setTimer] = useState(null);
+  const appRef = useRef();
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
 
   const baseUrl = (window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2024-unctad60/' : './';
   useEffect(() => {
@@ -80,22 +82,73 @@ function Timeline() {
     }
   };
 
+  const startTimer = (s, seconds) => {
+    let startTime; let timerInterval; const obj = {}; let ms = seconds * 1000;
+    obj.resume = () => {
+      if (progressContent.current.textContent === '▶' || progressContent.current.textContent === '5') {
+        progressContent.current.classList.remove('play');
+        startTime = new Date().getTime();
+        // Adjust this number to affect granularity
+        // Lower numbers are more accurate, but more CPU-expensive
+        timerInterval = setInterval(obj.step, 50);
+      }
+    };
+    obj.pause = () => {
+      if (progressContent.current.textContent !== '▶') {
+        ms = Math.max(0, ms - (new Date().getTime() - startTime));
+        progressContent.current.textContent = '▶';
+        progressContent.current.classList.add('play');
+        clearInterval(timerInterval);
+      }
+    };
+    obj.clear = () => {
+      clearInterval(timerInterval);
+      obj.resume = () => {};
+      document.querySelector('.autoplay-progress').style.display = 'none';
+    };
+    obj.step = () => {
+      const now = Math.max(0, ms - (new Date().getTime() - startTime));
+      const seconds_left = `${Math.round(now / 1000) % 60}`;
+      progressCircle.current.style.setProperty('--progress', 1 - now / 1000 / seconds);
+      progressContent.current.textContent = seconds_left;
+      if (now === 0) {
+        clearInterval(timerInterval);
+        // obj.resume = () => {};
+        s.slideNext();
+        progressCircle.current.style.setProperty('--progress', 0);
+        progressContent.current.textContent = 5;
+        setTimeout(() => {
+          ms = 5000;
+          console.log('resume 1');
+          obj.resume();
+        }, 500);
+      }
+      return now;
+    };
+    return obj;
+  };
+
+  const isVisible = useIsVisible(appRef, { once: true });
+
   return (
-    <div className="app">
+    <div className="app" ref={appRef}>
+      {
+        (isVisible && timer) && timer.resume()
+      }
       <div className="controls_container">
         <div className="button_container">
-          <button type="button" onClick={() => swiper.slidePrev()} className="prev_slide not_active" aria-label="Previous slide" />
+          <button type="button" onClick={() => { timer.pause(); swiper.slidePrev(); }} className="prev_slide not_active" aria-label="Previous slide" />
         </div>
         <div className="button_container">
-          <button type="button" onClick={() => swiper.slideNext()} className="next_slide" aria-label="Next slide" />
+          <button type="button" onClick={() => { timer.pause(); swiper.slideNext(); }} className="next_slide" aria-label="Next slide" />
         </div>
         <div className="button_container">
-          <button type="button" onClick={() => swiper.slideTo(0)} className="decade decade_1964 active" aria-label="">1964–1973</button>
-          <button type="button" onClick={() => swiper.slideTo(12)} className="decade decade_1974" aria-label="">1974–1983</button>
-          <button type="button" onClick={() => swiper.slideTo(22)} className="decade decade_1984" aria-label="">1984–1993</button>
-          <button type="button" onClick={() => swiper.slideTo(31)} className="decade decade_1994" aria-label="">1994–2003</button>
-          <button type="button" onClick={() => swiper.slideTo(40)} className="decade decade_2004" aria-label="">2004–2013</button>
-          <button type="button" onClick={() => swiper.slideTo(53)} className="decade decade_2014" aria-label="">2014–present</button>
+          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(0); }} className="decade decade_1964 active" aria-label="">1964–1973</button>
+          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(12); }} className="decade decade_1974" aria-label="">1974–1983</button>
+          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(22); }} className="decade decade_1984" aria-label="">1984–1993</button>
+          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(31); }} className="decade decade_1994" aria-label="">1994–2003</button>
+          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(40); }} className="decade decade_2004" aria-label="">2004–2013</button>
+          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(53); }} className="decade decade_2014" aria-label="">2014–present</button>
         </div>
       </div>
       <div className="swiper_wrapper">
@@ -103,32 +156,29 @@ function Timeline() {
           data
           && (
           <Swiper
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: true,
-              pauseOnMouseEnter: false,
-              stopOnLastSlide: true
-            }}
             grabCursor
             keyboard={{
               enabled: true
             }}
             lazy="true"
-            modules={[A11y, Autoplay, Keyboard, Pagination, Mousewheel]}
+            modules={[A11y, Keyboard, Pagination, Mousewheel]}
             mousewheel={{
               forceToAxis: true,
               releaseOnEdges: true
             }}
             direction="horizontal"
-            onAutoplayTimeLeft={onAutoplayTimeLeft}
             onSlideChange={(s) => updateControls(s)}
-            onAutoplayStop={() => {
-              document.querySelector('.autoplay-progress').style.visibility = 'hidden';
-            }}
             pagination={{
-              type: 'progressbar',
+              type: 'progressbar'
             }}
-            onSwiper={(s) => setSwiper(s)}
+            onReachEnd={() => { timer.clear(); }}
+            onSwiper={(s) => {
+              setTimer(startTimer(s, 5));
+              setSwiper(s);
+            }}
+            onTouchMove={() => {
+              timer.pause();
+            }}
             slidesPerView="auto"
             spaceBetween={0}
             style={{
@@ -160,10 +210,7 @@ function Timeline() {
                         }
                         <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
                       </div>
-                      <p>
-                        {' '}
-                        <Markdown>{el.text}</Markdown>
-                      </p>
+                      <Markdown>{el.text}</Markdown>
                     </div>
                     )
                   }
@@ -189,7 +236,7 @@ function Timeline() {
               <svg viewBox="0 0 48 48" ref={progressCircle}>
                 <circle cx="24" cy="24" r="20" />
               </svg>
-              <span ref={progressContent} />
+              <span ref={progressContent} onClick={() => { if (progressContent.current.textContent === '▶') { timer.resume(); } }} aria-label="seconds" role="presentation">5</span>
             </div>
           </Swiper>
           )
