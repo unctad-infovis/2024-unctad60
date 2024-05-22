@@ -103,8 +103,6 @@
     background-color: #fff;
     box-sizing: box-sizing;
     margin: 20px;
-    .swiper-pagination-progressbar {
-    }
     .swiper {
       .swiper-slide {
         align-items: center;
@@ -132,6 +130,14 @@
                 padding: 0;
                 width: 30px;
               }
+              &.date_container_decade {
+                span {
+                  background-color: #009edb;
+                  color: #fff;
+                  display: inline-block;
+                  padding: 5px 7px;
+                }
+              }
             }
             .image_container {
               margin: 0;
@@ -156,7 +162,13 @@
               }
             }
             .image_container_logo {
+              height: 100%;
+              width: 400px;
+              display: flex;
+              justify-content: center;
               .img {
+                display: inline-block;
+                height: auto;
               }
             }
             .image_container_with_arrow {

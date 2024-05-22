@@ -197,8 +197,6 @@ function Timeline() {
                       <div className="date_container">
                         {el.country && <CircleFlag countryCode={el.country} height="40" />}
                         {el.date}
-                        {' '}
-                        {el.id}
                       </div>
                       <figure className="image_container image_container_with_arrow">
                         {
@@ -220,13 +218,11 @@ function Timeline() {
                   {
                     el.type === 'cover' && (
                       <div className="content_container">
-                        <div className="date_container">
-                          {el.text}
-                          {' '}
-                          {el.id}
+                        <div className="date_container date_container_decade">
+                          <span>{el.text}</span>
                         </div>
                         <div className="image_container image_container_logo">
-                          <img className="img" src={`${baseUrl}assets/img/unctad-logo.jpg`} alt="" loading="lazy" />
+                          <img className="img" src={`${baseUrl}assets/img/unctad_logo2.png`} alt="" loading="lazy" />
                           <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
                         </div>
                       </div>
