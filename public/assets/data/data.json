@@ -6,30 +6,35 @@
   "id":"id_1",
   "country":"ch",
   "img":"1964 id_1 The first session  of the UNCTAD I - UN7779095_b98_-min.jpg",
+  "img_source":false,
   "text":"The first session of the United Nations Conference on Trade and Development ([UNCTAD I](https://unctad.org/meeting/first-session-united-nations-conference-trade-and-development-unctad-i)) is held from 23 March to 16 June in Geneva, Switzerland.",
   "type":"image/text",
   "date":1964
 },{
   "id":"id_2",
   "img":"1964 id_2 Che Guevara 1964 UN7516373-min.jpg",
+  "img_source":false,
   "text":"The Group of 77 ([G77](https://www.g77.org/)) is founded at UNCTAD I.",
   "type":"image/text",
   "date":1964
 },{
   "id":"id_3",
   "img":"1964 id_3 UN General Assembly resolution 1995 in dec 1964 UN7516397 -min.jpg",
+  "img_source":false,
   "text":"UN General Assembly resolution 1995 (XIX) establishes UNCTAD as a permanent intergovernmental body in December.",
   "type":"image/text",
   "date":1964
 },{
   "id":"id_4",
   "img":"1964 id_4 Raul Prebisch ( Argentina ) is appointed 1964 UN7654260_87d_-min.jpg",
+  "img_source":false,
   "text":"[Raúl Prebisch](https://unctad.org/osg/former-secretaries-general-and-officers-charge/raul-prebisch) (Argentina) is appointed the first Secretary-General of UNCTAD.",
   "type":"image/text",
   "date":1964
 },{
   "id":"id_5",
   "img":"1967 id_5 The handbook of statistics 1967 UN7456258-min.jpg",
+  "img_source":false,
   "text":"The [Handbook of Statistics](https://hbs.unctad.org/) report series is launched.",
   "type":"image/text",
   "date":1967
@@ -37,30 +42,35 @@
   "id":"id_6",
   "country":"in",
   "img":"1968 id_6 UNCTAD 2 (New Dheli, India , 1968) UN7621455_a14_-min.jpg",
+  "img_source":false,
   "text":"[UNCTAD II](https://unctad.org/meeting/second-session-united-nations-conference-trade-and-development-second-session-unctad-ii) (New Delhi, India) adopts a resolution calling for the establishment of the [Generalized System of Preferences](https://unctad.org/topic/trade-agreements/generalized-system-of-preferences).",
   "type":"image/text",
   "date":1968
 },{
   "id":"id_7",
   "img":"1968 id_7 1968 The Review of Maritime Transport- UN7621016 -min.jpg",
+  "img_source":false,
   "text":"The [Review of Maritime Transport](https://unctad.org/topic/transport-and-trade-logistics/review-of-maritime-transport) report series is launched.",
   "type":"image/text",
   "date":1968
 },{
   "id":"id_8",
   "img":"1969 i_d8 Manuel Perez-Guerrero 1969 UN7509308-min.jpg",
+  "img_source":false,
   "text":"[Manuel Pérez-Guerrero](https://unctad.org/osg/former-secretaries-general-and-officers-charge/manuel-perez-guerrero) (Venezuela) is appointed Secretary-General of UNCTAD.",
   "type":"image/text",
   "date":1969
 },{
   "id":"id_9",
   "img":"1971 id_9 The UN recognizes the least 1971 UN7722337-min.jpg",
+  "img_source":false,
   "text":"The UN recognizes the [least developed countries](https://unctad.org/topic/least-developed-countries) category through the efforts of UNCTAD and the Committee for Development Planning.",
   "type":"image/text",
   "date":1971
 },{
   "id":"id_10",
   "img":"1971 id_10 The Group of Twenty-four (G24) UN7420527-min.jpg",
+  "img_source":false,
   "text":"The Group of Twenty-Four ([G-24](https://www.g24.org/)) is created by developing countries, giving a greater role to UNCTAD in international monetary affairs and development.",
   "type":"image/text",
   "date":1971
@@ -68,6 +78,7 @@
   "id":"id_11",
   "country":"cl",
   "img":"1972 id_11 UNCTAD 3 1972 . UN7472967-min.jpg",
+  "img_source":false,
   "text":"[UNCTAD III](https://unctad.org/meeting/third-session-united-nations-conference-trade-and-development-unctad-iii) (Santiago, Chile).",
   "type":"image/text",
   "date":1972
@@ -78,12 +89,14 @@
 },{
   "id":"id_13",
   "img":"1974 id_13 Gamani Corea 1974 UN7760925-min.jpg",
+  "img_source":false,
   "text":"[Gamani Corea](https://unctad.org/osg/former-secretaries-general-and-officers-charge/gamani-corea) (Sri Lanka) is appointed Secretary-General of UNCTAD.",
   "type":"image/text",
   "date":1974
 },{
   "id":"id_14",
   "img":"1974 id_14 UNCTAD isses a strong call to make 1974 UN7698543-min.jpg",
+  "img_source":false,
   "text":"UNCTAD issues a strong call to make the global economic system work for developing countries in UN General Assembly resolutions 3201 and 3202(S-VI).",
   "type":"image/text",
   "date":1974
@@ -91,12 +104,14 @@
   "id":"id_15",
   "country":"ke",
   "img":"1976 id_15 UNCTAD 4 UN7458351-min.jpg",
+  "img_source":false,
   "text":"[UNCTAD IV](https://unctad.org/meeting/fourth-session-united-nations-conference-trade-and-development-unctad-iv) (Nairobi, Kenya) adopts the Integrated Programme for Commodities in response to the challenges faced by developing countries dependent on exports of raw materials. ",
   "type":"image/text",
   "date":1976
 },{
   "id":"id_16",
   "img":"1979 id_16 The UN General Assembly gives UNCTAD LDC-min.jpg",
+  "img_source":"UN Archives Geneva",
   "text":"The UN General Assembly designates UNCTAD to lead the preparations for the UN Conference on the Least Developed Countries. It has led the preparations for all five editions of the conference.",
   "type":"image/text",
   "date":1979
@@ -104,24 +119,28 @@
   "id":"id_17",
   "country":"ph",
   "img":"1979 id_17 UNCTAD 5 Manila-min.jpg",
+  "img_source":"UN Archives Geneva",
   "text":"[UNCTAD V](https://unctad.org/meeting/fifth-session-united-nations-conference-trade-and-development-unctad-v) (Manila, Philippines).",
   "type":"image/text",
   "date":1979
 },{
   "id":"id_18",
   "img":"1980 id_18 The UN general assembly designates UNCTAD as the system 1980-min.jpg",
+  "img_source":"UN Archives Geneva",
   "text":"The UN General Assembly designates UNCTAD as the system-wide focal point for competition law and policy.",
   "type":"image/text",
   "date":1980
 },{
   "id":"id_19",
   "img":"1981 id_19 UNCTAD launches the ASYCUDA 1981-min.jpg",
+  "img_source":false,
   "text":"UNCTAD launches the Automated System for Customs Data ([ASYCUDA](https://unctad.org/topic/transport-and-trade-logistics/customs-automation-ASYCUDA)) programme and the Debt Management and Financial Analysis System ([DMFAS](https://unctad.org/topic/debt-and-finance/dmfas)) programme to support developing countries.",
   "type":"image/text",
   "date":1981
 },{
   "id":"id_20",
   "img":"1981 id_20 The trade and development report series 1981  UN7586042-min.jpg",
+  "img_source":false,
   "text":"The Trade and Development Report series is launched.",
   "type":"image/text",
   "date":1981
@@ -129,6 +148,7 @@
   "id":"id_21",
   "country":"rs",
   "img":"1983 id_21 UNCTAD 6 1983 UN7759093-min.jpg",
+  "img_source":false,
   "text":"[UNCTAD VI](https://unctad.org/meeting/sixth-session-united-nations-conference-trade-and-development-unctad-vi) (Belgrade, Serbia).",
   "type":"image/text",
   "date":1983
@@ -139,12 +159,14 @@
 },{
   "id":"id_23",
   "img":"1984 id_23 The least developped countries report series 1984 UN7592300-min.jpg",
+  "img_source":false,
   "text":"The [Least Developed Countries Report](https://unctad.org/topic/least-developed-countries/least-developed-countries/ldc-report) series is launched.",
   "type":"image/text",
   "date":1984
 },{
   "id":"id_24",
   "img":"1986 id_24 Kenneth K.S. Dadzie 1986 UN7769428-min.jpg",
+  "img_source":false,
   "text":"[Kenneth K.S. Dadzie](https://unctad.org/osg/former-secretaries-general-and-officers-charge/kenneth-ks-dadzie) (Ghana) is appointed Secretary-General of UNCTAD.",
   "type":"image/text",
   "date":1986
@@ -152,24 +174,28 @@
   "id":"id_25",
   "country":"ch",
   "img":"1987 id_25 UNCTAD 7 1987 UN7760928-min.jpg",
+  "img_source":false,
   "text":"[UNCTAD VII](https://unctad.org/meeting/united-nations-conference-trade-and-development-seventh-session-unctad-vii) (Geneva, Switzerland).",
   "type":"image/text",
   "date":1987
 },{
   "id":"id_26",
   "img":"1988 id_26 UNCTAD Creates the Empretec 1988 UN7547249-min.jpg",
+  "img_source":false,
   "text":"UNCTAD creates the [Empretec](https://unctad.org/topic/enterprise-development/Empretec) entrepreneurship capacity-building programme to support entrepreneurs and smaller businesses, particularly in developing countries",
   "type":"image/text",
   "date":1988
 },{
   "id":"id_27",
   "img":"1988 id_27 Strong support from UNCTAD leads to the adoption 1988 UN7516397-min.jpg",
+  "img_source":false,
   "text":"Strong support from UNCTAD leads to the adoption of the [Global System of Trade Preferences among Developing Countries](https://unctad.org/topic/trade-agreements/global-system-of-trade-preferences), which enters into effect in 1989",
   "type":"image/text",
   "date":1988
 },{
   "id":"id_28",
   "img":"1991 id_28 The world Investment report series is launched 1991 UN7767726-min.jpg",
+  "img_source":false,
   "text":"The [World Investment Report](https://unctad.org/publications-search?f%5b0%5d=product%3A397) series is launched.",
   "type":"image/text",
   "date":1991
@@ -177,12 +203,14 @@
   "id":"id_29",
   "country":"co",
   "img":"1992 id_29 UNCTAD 8 (cartagena ) 1992-min.jpg",
+  "img_source":"UN Archives Geneva",
   "text":"[UNCTAD VIII](https://unctad.org/meeting/eighth-session-united-nations-conference-trade-and-development-unctad-viii) (Cartagena, Colombia) adopts a New Partnership for Development.",
   "type":"image/text",
   "date":1992
 },{
   "id":"id_30",
   "img":"1993 id_30UN7223170-min.jpg",
+  "img_source":false,
   "text":"UNCTAD is appointed Secretariat for the [UN Commission on Science and Technology for Development](https://unctad.org/topic/commission-on-science-and-technology-for-development), which since 2006 has served as the focal point for system wide follow-up of the World Summit on the Information Society outcomes.",
   "type":"image/text",
   "date":1993
@@ -193,12 +221,14 @@
 },{
   "id":"id_32",
   "img":"1994 id_32 Supported by UNCTAD; Botswana 1994 UN7561920-min.jpg",
+  "img_source":false,
   "text":"Supported by UNCTAD, Botswana becomes the first nation to graduate from the UN category of [least developed countries](https://unctad.org/topic/least-developed-countries/list).",
   "type":"image/text",
   "date":1994
 },{
   "id":"id_33",
   "img":"1995 id_33 Rubens Ricupero 1995 UN712685-min.jpg",
+  "img_source":false,
   "text":"[Rubens Ricupero](https://unctad.org/osg/former-secretaries-general-and-officers-charge/rubens-ricupero) (Brazil) is appointed Secretary-General of UNCTAD.",
   "type":"image/text",
   "date":1995
@@ -206,18 +236,21 @@
   "id":"id_34",
   "country":"za",
   "img":"1996 id_34 UNCTAD 9 1996 UN7551430-min.jpg",
+  "img_source":false,
   "text":"[UNCTAD IX](https://unctad.org/meeting/ninth-session-united-nations-conference-trade-and-development-unctad-ix) (Midrand, South Africa).",
   "type":"image/text",
   "date":1996
 },{
   "id":"id_35",
   "img":"1996 id_35 The BioTrade Initiave 1996 UN7698550-min.jpg",
+  "img_source":false,
   "text":"The [BioTrade Initiative](https://unctad.org/topic/trade-and-environment/biotrade) is launched to pioneer efforts to conserve biodiversity through sustainable trade",
   "type":"image/text",
   "date":1996
 },{
   "id":"id_36",
   "img":"1996 id_36 LAte 1990s Id-36 ONU_Geneva_mainroom-min.jpg",
+  "img_source":false,
   "text":"“Positive Agenda” – UNCTAD redoubles efforts to support developing economies to actively participate in global trade negotiations.",
   "type":"image/text",
   "date":"Late 1990s"

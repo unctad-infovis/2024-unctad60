@@ -200,7 +200,7 @@ function Timeline() {
                         {' '}
                         {el.id}
                       </div>
-                      <div className="image_container image_container_with_arrow">
+                      <figure className="image_container image_container_with_arrow">
                         {
                           el.img ? (
                             <img className="img" src={`${baseUrl}assets/img/horizontal_timeline/${el.img}`} alt="" loading="lazy" />
@@ -208,8 +208,11 @@ function Timeline() {
                             <img className="img" src="https://dummyimage.com/640x480/f4f9fd/000&text=placeholder" alt="" loading="lazy" />
                           )
                         }
+                        {
+                          el.img_source && <figcaption>{el.img_source}</figcaption>
+                        }
                         <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
-                      </div>
+                      </figure>
                       <Markdown>{el.text}</Markdown>
                     </div>
                     )
