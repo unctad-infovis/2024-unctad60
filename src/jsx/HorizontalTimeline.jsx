@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/styles.less';
 
 import {
@@ -23,6 +24,20 @@ import { CircleFlag } from 'react-circle-flags';
 // https://github.com/remarkjs/react-markdown
 import Markdown from 'react-markdown';
 
+function LinkRenderer(props) {
+  const { href } = props;
+  const { children } = props;
+  return <a href={href} target="_blank" rel="noreferrer">{children}</a>;
+}
+
+LinkRenderer.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.string
+};
+LinkRenderer.defaultProps = {
+  href: '',
+  children: ''
+};
 // Load helpers.
 // import formatNr from './helpers/FormatNr.js';
 // import roundNr from './helpers/RoundNr.js';
@@ -119,7 +134,6 @@ function Timeline() {
         progressContent.current.textContent = 5;
         setTimeout(() => {
           ms = 5000;
-          console.log('resume 1');
           obj.resume();
         }, 500);
       }
@@ -171,7 +185,13 @@ function Timeline() {
             pagination={{
               type: 'progressbar'
             }}
+            onKeyPress={() => {
+              timer.pause();
+            }}
             onReachEnd={() => { timer.clear(); }}
+            onScroll={() => {
+              timer.pause();
+            }}
             onSwiper={(s) => {
               setTimer(startTimer(s, 5));
               setSwiper(s);
@@ -211,7 +231,7 @@ function Timeline() {
                         }
                         <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
                       </figure>
-                      <Markdown>{el.text}</Markdown>
+                      <Markdown components={{ a: LinkRenderer }}>{el.text}</Markdown>
                     </div>
                     )
                   }
