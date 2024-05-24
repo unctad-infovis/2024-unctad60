@@ -55,7 +55,7 @@
   "date":1968
 },{
   "id":"id_8",
-  "img":"1969 i_d8 Manuel Perez-Guerrero 1969 UN7509308-min.jpg",
+  "img":"1969 id_8 Manuel Perez-Guerrero 1969 UN7509308-min.jpg",
   "img_source":false,
   "text":"[Manuel Pérez-Guerrero](https://unctad.org/osg/former-secretaries-general-and-officers-charge/manuel-perez-guerrero) (Venezuela) is appointed Secretary-General of UNCTAD.",
   "type":"image/text",
@@ -64,7 +64,7 @@
   "id":"id_9",
   "img":"1971 id_9 The UN recognizes the least 1971 UN7722337-min.jpg",
   "img_source":false,
-  "text":"The UN recognizes the [least developed countries](https://unctad.org/topic/least-developed-countries) category through the efforts of UNCTAD and the Committee for Development Planning.",
+  "text":"The UN recognizes the [least developed countries](https://unctad.org/topic/least-developed-countries/list) category through the efforts of UNCTAD and the Committee for Development Planning.",
   "type":"image/text",
   "date":1971
 },{
@@ -299,13 +299,13 @@
   "date":2008
 },{
   "id":"id_44",
-  "img":"2008 id_44 the World Investment Forum 2008 UN7672777-min.jpg",
+  "img":"2008 id_44-min.jpg",
   "text":"The [World Investment Forum](https://worldinvestmentforum.unctad.org/), a key global event to harness investment for sustainable development, is launched during UNCTAD XII.",
   "type":"image/text",
   "date":2008
 },{
   "id":"id_45",
-  "img":"2009 id_45 UN7671567-min.jpg",
+  "img":"2009 id_45-min",
   "text":"UNCTAD organizes the first annual public symposium with civil society to foster dialogue on trade, investment and inclusive, sustainable development.",
   "type":"image/text",
   "date":2009
@@ -317,7 +317,7 @@
   "date":2010
 },{
   "id":"id_47",
-  "img":"2010 id_47 The technology and innovaztion report series 2010 UN7251905-min.jpg",
+  "img":"2010 id_47-min.jpg",
   "text":"The [Technology and Innovation Report](https://unctad.org/publications-search?f%5b0%5d=product%3A644) series is launched.",
   "type":"image/text",
   "date":2010
@@ -329,7 +329,7 @@
   "date":2010
 },{
   "id":"id_49",
-  "img":"2010 id_49 The open source database 2010 UN7280966-min.jpg",
+  "img":"2010 id_49-min.jpg",
   "text":"The free online database [UNCTADstat](https://unctadstat.unctad.org/EN/) is launched on the first-ever World Statistics Day on 20 October.",
   "type":"image/text",
   "date":2010
@@ -389,8 +389,8 @@
   "date":2019
 },{
   "id":"id_59",
-  "img":"2021 id_59 Teh Pdorductive Capacities Index 2021 UN7911716-min.jpg",
-  "text":"The [Productive Capacities Index](https://unctad.org/publication/digital-economy-report-2021) is launched to help developing countries better assess and improve their economic performance. ",
+  "img":"2021 id_59-min.jpg",
+  "text":"The [Productive Capacities Index](https://unctad.org/news/productive-capacities-index-helps-countries-build-economic-resilience) is launched to help developing countries better assess and improve their economic performance. ",
   "type":"image/text",
   "date":2021
 },{
