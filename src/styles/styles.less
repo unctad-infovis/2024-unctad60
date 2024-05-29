@@ -1,43 +1,5 @@
 @import 'colors.less';
 
-
-.autoplay-progress {
-  align-items: center;
-  color: var(--swiper-theme-color);
-  display: flex;
-  font-weight: bold;
-  height: 40px;
-  justify-content: center;
-  right: 5px;
-  font-size: 12px;
-  position: absolute;
-  top: 15px;
-  width: 40px;
-  z-index: 10;
-  svg {
-    --progress: 0;
-    fill: none;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    stroke-dasharray: 125.6;
-    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
-    top: 0px;
-    transform: rotate(-90deg);
-    width: 100%;
-    z-index: 10;
-  }
-  span {
-    position: relative;
-    z-index: 20;
-    &.play {
-      cursor: pointer;
-    }
-  }
-}
-
 .app-root-2024-unctad60 .app {
   background-color: #f4f9fd;
   font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -46,7 +8,7 @@
     display: flex;
     align-items: center;
     .button_container {
-      margin-right: 10px;
+      margin-right: 8px;
       display: inline-block;
       button {
         background-color: #fff;
@@ -68,10 +30,11 @@
         }
         &.decade {
           border-radius: 10px;
+          color: #009edb;
           font-size: 13px;
           font-weight: 600;
           letter-spacing: 0.02em;
-          margin: 0 5px;
+          margin: 2px 2px;
           padding: 7px 10px;
           &.active {
             background-color: #c5dfef;
@@ -101,9 +64,46 @@
   }
   .swiper_wrapper {
     background-color: #fff;
-    box-sizing: box-sizing;
+    box-sizing: border-box;
     margin: 20px;
     .swiper {
+      .autoplay-progress {
+        align-items: center;
+        color: var(--swiper-theme-color);
+        display: flex;
+        font-weight: bold;
+        height: 40px;
+        justify-content: center;
+        right: 5px;
+        font-size: 12px;
+        position: absolute;
+        top: 15px;
+        width: 40px;
+        z-index: 10;
+        svg {
+          --progress: 0;
+          fill: none;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          stroke-dasharray: 125.6;
+          stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+          stroke-width: 4px;
+          stroke: var(--swiper-theme-color);
+          top: 0px;
+          transform: rotate(-90deg);
+          width: 100%;
+          z-index: 10;
+        }
+        span {
+          position: relative;
+          text-shadow: 1px 1px 1px #fff;
+          z-index: 20;
+          &.play {
+            cursor: pointer;
+          }
+        }
+      }
       .swiper-slide {
         align-items: center;
         background: #fff;
@@ -159,6 +159,9 @@
                 max-width: none;
                 padding: 0;
                 width: auto;
+                @media all and (max-width: 600px) {
+                  max-height: 250px;
+                }
               }
             }
             .image_container_logo {
@@ -166,6 +169,9 @@
               width: 400px;
               display: flex;
               justify-content: center;
+              @media all and (max-width: 600px) {
+                width: 250px;
+              }
               .img {
                 display: inline-block;
                 height: auto;
