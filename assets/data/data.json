@@ -33,7 +33,7 @@
   "date":1964
 },{
   "id":"id_5",
-  "img":"1967 id_5 The handbook of statistics 1967 UN7456258-min.jpg",
+  "img":"id_5-min.jpg",
   "img_source":false,
   "text":"The [Handbook of Statistics](https://hbs.unctad.org/) report series is launched.",
   "type":"image/text",
@@ -48,7 +48,7 @@
   "date":1968
 },{
   "id":"id_7",
-  "img":"1968 id_7 1968 The Review of Maritime Transport- UN7621016 -min.jpg",
+  "img":"id_7-min.jpg",
   "img_source":false,
   "text":"The [Review of Maritime Transport](https://unctad.org/topic/transport-and-trade-logistics/review-of-maritime-transport) report series is launched.",
   "type":"image/text",
@@ -139,7 +139,7 @@
   "date":1981
 },{
   "id":"id_20",
-  "img":"1981 id_20 The trade and development report series 1981  UN7586042-min.jpg",
+  "img":"id_19-min.jpg",
   "img_source":false,
   "text":"The [Trade and Development Report](https://unctad.org/topic/macroeconomics/trade-development-report) series is launched.",
   "type":"image/text",
@@ -158,7 +158,7 @@
   "type":"cover"
 },{
   "id":"id_23",
-  "img":"1984 id_23 The least developped countries report series 1984 UN7592300-min.jpg",
+  "img":"id_9-min.jpg",
   "img_source":false,
   "text":"The [Least Developed Countries Report](https://unctad.org/topic/least-developed-countries/least-developed-countries/ldc-report) series is launched.",
   "type":"image/text",
@@ -194,7 +194,7 @@
   "date":1988
 },{
   "id":"id_28",
-  "img":"1991 id_28 The world Investment report series is launched 1991 UN7767726-min.jpg",
+  "img":"id_26-min.jpg",
   "img_source":false,
   "text":"The [World Investment Report](https://unctad.org/publications-search?f%5b0%5d=product%3A397) series is launched.",
   "type":"image/text",
@@ -256,7 +256,7 @@
   "date":"Late 1990s"
 },{
   "id":"id_37",
-  "img":"2000 id_37 The economic development in Africa report 2000 UN7313071-min.jpg",
+  "img":"id_35-min.jpg",
   "text":"The [Economic Development in Africa Report](https://unctad.org/topic/africa/economic-development-in-africa-report) series is launched.",
   "type":"image/text",
   "date":2000
@@ -269,7 +269,7 @@
   "date":2000
 },{
   "id":"id_39",
-  "img":"2001 id_39 The E-commerce and Development 2001UN7778491-min.jpg",
+  "img":"id_38-min.jpg",
   "text":"The [E-commerce and Development Report](https://unctad.org/publications-search?f%5b0%5d=product%3A602) series is launched. It becomes the [Information Economy Report](https://unctad.org/publications-search?f%5B0%5D=product%3A391) in 2005 and then the [Digital Economy Report](https://unctad.org/publication/digital-economy-report-2021) in 2019.",
   "type":"image/text",
   "date":2001
@@ -383,7 +383,7 @@
   "date":2019
 },{
   "id":"id_58",
-  "img":"2019 id_58-min.jpg",
+  "img":"id_53-min.jpg",
   "text":"UNCTAD is a founding partner of [World Cotton Day](https://unctad.org/es/isar/news/fibre-fabric-celebrating-value-cotton), celebrated on 7 October.",
   "type":"image/text",
   "date":2019
@@ -395,20 +395,20 @@
   "date":2021
 },{
   "id":"id_60",
-  "img":"2021 id_60 secretary-general-grynspan-2023-min.jpg",
+  "img":"id_56-min.jpg",
   "text":"[Rebeca Grynspan](https://unctad.org/about/office-of-the-secretary-general) (Costa Rica) makes history as the first woman appointed Secretary-General of UNCTAD.",
   "type":"image/text",
   "date":2021
 },{
   "id":"id_61",
   "country":"bb",
-  "img":"2021 id_61 UNCTAD 15 2021 UN7913647-min.jpg",
+  "img":"id_53-min.jpg",
   "text":"[UNCTAD 15](https://unctad.org/meeting/fifteenth-session-united-nations-conference-trade-and-development-unctad-15) (Bridgetown, Barbados).",
   "type":"image/text",
   "date":2021
 },{
   "id":"id_62",
-  "img":"2022 id_62 UNCTAD plays a key role in the UN Global Crisis Reponse Group 2022 UN7946166-min.jpg",
+  "img":"id_57-min.jpg",
   "text":"UNCTAD plays a key role in the [UN Global Crisis Response Group on Food, Energy and Finance](https://news.un.org/pages/global-crisis-response-group/) launched by UN Secretary-General António Guterres to support developing countries facing unprecedented geopolitical, health and climate shocks to their economies.",
   "type":"image/text",
   "date":2022
@@ -420,7 +420,7 @@
   "date":2023
 },{
   "id":"id_64",
-  "img":"2024 id_64 Rebranding to 'UN Trade and Development' 2024-min.jpg",
+  "img":"id_60-min.jpg",
   "text":"UNCTAD rebrands to [UN Trade and Development(UNCTAD)](https://unctad.org/news/unctad-rebrands-un-trade-and-development) to improve the understanding and impact of its mission, ensuring that the perspectives of developing countries are heard in all global economic, trade and development processes.",
   "type":"image/text",
   "date":2024
