@@ -378,7 +378,7 @@ function Timeline() {
     },
     title: '19 – 25 April 2008 '
   }, {
-    cardDetailedText: ['Launched at UNCTAD XII, the cluster comprises 15 UN agencies including UNCTAD. The cluster contributes to UN system-wide coherence reform, coordinating operations at global, regional and country levels, and accessing innovative multi-donor funding mechanisms.', '<span class="right"><strong>Further reading</strong><br /><a href="https://unctad.org/osg/former-secretaries-general-and-officers-charge/supachai-panitchpakdi">UN Inter-Agency Cluster on Trade and Productive Capacity</a></span>'],
+    cardDetailedText: ['Launched at UNCTAD XII, the cluster comprises 15 UN agencies including UNCTAD. The cluster contributes to UN system-wide coherence reform, coordinating operations at global, regional and country levels, and accessing innovative multi-donor funding mechanisms.', '<span class="right"><strong>Further reading</strong><br /><a href="https://unctad.org/publication/united-nations-inter-agency-cluster-trade-and-productive-capacity-0">UN Inter-Agency Cluster on Trade and Productive Capacity</a></span>'],
     cardSubtitle: '',
     cardTitle: 'UN Inter-Agency Cluster on Trade and Productive Capacity',
     media: {
