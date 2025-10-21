@@ -70,6 +70,10 @@ function Timeline() {
     }
   }, [baseUrl]);
 
+  useEffect(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, []);
+
   const updateControls = (s) => {
     if (s.isBeginning === true) {
       document.querySelector('.prev_slide').classList.add('not_active');
@@ -188,7 +192,9 @@ function Timeline() {
             onKeyPress={() => {
               timer.pause();
             }}
-            onReachEnd={() => { timer.clear(); }}
+            onReachEnd={() => {
+              if (timer) timer.clear();
+            }}
             onScroll={() => {
               timer.pause();
             }}

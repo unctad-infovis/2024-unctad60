@@ -1,5 +1,10 @@
 @import 'colors.less';
-
+.layout__region.layout__region--first {
+  min-width: 0;
+}
+.layout-builder__region.js-layout-builder-region.layout__region.layout__region--first {
+  min-width: 0;
+}
 .app-root-2024-unctad60 .app {
   background-color: #f4f9fd;
   font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -67,6 +72,8 @@
     box-sizing: border-box;
     margin: 20px;
     .swiper {
+      min-width: 0;
+      width: 100%;
       .autoplay-progress {
         align-items: center;
         color: var(--swiper-theme-color);
