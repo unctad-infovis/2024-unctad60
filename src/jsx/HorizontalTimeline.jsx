@@ -24,19 +24,13 @@ import { CircleFlag } from 'react-circle-flags';
 // https://github.com/remarkjs/react-markdown
 import Markdown from 'react-markdown';
 
-function LinkRenderer(props) {
-  const { href } = props;
-  const { children } = props;
+function LinkRenderer({ href = '', children = '' }) {
   return <a href={href} target="_blank" rel="noreferrer">{children}</a>;
 }
 
 LinkRenderer.propTypes = {
   href: PropTypes.string,
   children: PropTypes.string
-};
-LinkRenderer.defaultProps = {
-  href: '',
-  children: ''
 };
 // Load helpers.
 // import formatNr from './helpers/FormatNr.js';
