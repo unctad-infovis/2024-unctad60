@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/styles.less';
 
-import {
-  A11y, Keyboard, Pagination, Mousewheel
-} from 'swiper';
+import { A11y, Keyboard, Mousewheel, Pagination } from 'swiper';
 
 // https://v9.swiperjs.com/react
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,16 +14,17 @@ import { useIsVisible } from 'react-is-visible';
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css';
 
-// https://www.npmjs.com/package/react-country-flag
-// import ReactCountryFlag from 'react-country-flag';
-
-import { CircleFlag } from 'react-circle-flags';
+import CircleFlag from '@unctad-infovis/general-tools/components/CircleFlag.jsx';
 
 // https://github.com/remarkjs/react-markdown
 import Markdown from 'react-markdown';
 
 function LinkRenderer({ href = '', children = '' }) {
-  return <a href={href} target="_blank" rel="noreferrer">{children}</a>;
+  return (
+    <a href={href} target="_blank" rel="noreferrer">
+      {children}
+    </a>
+  );
 }
 
 LinkRenderer.propTypes = {
@@ -47,12 +46,12 @@ function Timeline() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
 
-  const baseUrl = (window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2024-unctad60/' : './';
+  const baseUrl = window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-unctad60/' : './';
   useEffect(() => {
     const data_file = `${baseUrl}assets/data/data.json`;
     try {
       fetch(data_file)
-        .then((response) => {
+        .then(response => {
           if (!response.ok) {
             throw Error(response.statusText);
           }
@@ -68,7 +67,7 @@ function Timeline() {
     window.dispatchEvent(new Event('resize'));
   }, []);
 
-  const updateControls = (s) => {
+  const updateControls = s => {
     if (s.isBeginning === true) {
       document.querySelector('.prev_slide').classList.add('not_active');
     } else {
@@ -96,7 +95,10 @@ function Timeline() {
   };
 
   const startTimer = (s, seconds) => {
-    let startTime; let timerInterval; const obj = {}; let ms = seconds * 1000;
+    let startTime;
+    let timerInterval;
+    const obj = {};
+    let ms = seconds * 1000;
     obj.resume = () => {
       if (progressContent.current.textContent === '▶' || progressContent.current.textContent === '5') {
         progressContent.current.classList.remove('play');
@@ -144,29 +146,101 @@ function Timeline() {
 
   return (
     <div className="app" ref={appRef}>
-      {
-        (isVisible && timer) && timer.resume()
-      }
+      {isVisible && timer && timer.resume()}
       <div className="controls_container">
         <div className="button_container">
-          <button type="button" onClick={() => { timer.pause(); swiper.slidePrev(); }} className="prev_slide not_active" aria-label="Previous slide" />
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slidePrev();
+            }}
+            className="prev_slide not_active"
+            aria-label="Previous slide"
+          />
         </div>
         <div className="button_container">
-          <button type="button" onClick={() => { timer.pause(); swiper.slideNext(); }} className="next_slide" aria-label="Next slide" />
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slideNext();
+            }}
+            className="next_slide"
+            aria-label="Next slide"
+          />
         </div>
         <div className="button_container">
-          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(0); }} className="decade decade_1964 active" aria-label="">1964–1973</button>
-          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(12); }} className="decade decade_1974" aria-label="">1974–1983</button>
-          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(22); }} className="decade decade_1984" aria-label="">1984–1993</button>
-          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(31); }} className="decade decade_1994" aria-label="">1994–2003</button>
-          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(40); }} className="decade decade_2004" aria-label="">2004–2013</button>
-          <button type="button" onClick={() => { timer.pause(); swiper.slideTo(53); }} className="decade decade_2014" aria-label="">2014–present</button>
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slideTo(0);
+            }}
+            className="decade decade_1964 active"
+            aria-label=""
+          >
+            1964–1973
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slideTo(12);
+            }}
+            className="decade decade_1974"
+            aria-label=""
+          >
+            1974–1983
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slideTo(22);
+            }}
+            className="decade decade_1984"
+            aria-label=""
+          >
+            1984–1993
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slideTo(31);
+            }}
+            className="decade decade_1994"
+            aria-label=""
+          >
+            1994–2003
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slideTo(40);
+            }}
+            className="decade decade_2004"
+            aria-label=""
+          >
+            2004–2013
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              timer.pause();
+              swiper.slideTo(53);
+            }}
+            className="decade decade_2014"
+            aria-label=""
+          >
+            2014–present
+          </button>
         </div>
       </div>
       <div className="swiper_wrapper">
-        {
-          data
-          && (
+        {data && (
           <Swiper
             grabCursor
             keyboard={{
@@ -179,7 +253,7 @@ function Timeline() {
               releaseOnEdges: true
             }}
             direction="horizontal"
-            onSlideChange={(s) => updateControls(s)}
+            onSlideChange={s => updateControls(s)}
             pagination={{
               type: 'progressbar'
             }}
@@ -192,7 +266,7 @@ function Timeline() {
             onScroll={() => {
               timer.pause();
             }}
-            onSwiper={(s) => {
+            onSwiper={s => {
               setTimer(startTimer(s, 5));
               setSwiper(s);
             }}
@@ -208,35 +282,25 @@ function Timeline() {
               '--swiper-theme-color': '#009edb'
             }}
           >
-            {data && data.map(el => (
-              <SwiperSlide key={el.id}>
-                <div className="slider_container">
-                  {
-                    el.type === 'image/text' && (
-                    <div className="content_container">
-                      <div className="date_container">
-                        {el.country && <CircleFlag countryCode={el.country} height="40" />}
-                        {el.date}
+            {data &&
+              data.map(el => (
+                <SwiperSlide key={el.id}>
+                  <div className="slider_container">
+                    {el.type === 'image/text' && (
+                      <div className="content_container">
+                        <div className="date_container">
+                          {el.country && <CircleFlag countryCode={el.country} height={30} />}
+                          {el.date}
+                        </div>
+                        <figure className="image_container image_container_with_arrow">
+                          {el.img ? <img className="img" src={`${baseUrl}assets/img/horizontal_timeline/${el.img}`} alt="" loading="lazy" /> : <img className="img" src="https://dummyimage.com/640x480/f4f9fd/000&text=placeholder" alt="" loading="lazy" />}
+                          {el.img_source && <figcaption>{el.img_source}</figcaption>}
+                          <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                        </figure>
+                        <Markdown components={{ a: LinkRenderer }}>{el.text}</Markdown>
                       </div>
-                      <figure className="image_container image_container_with_arrow">
-                        {
-                          el.img ? (
-                            <img className="img" src={`${baseUrl}assets/img/horizontal_timeline/${el.img}`} alt="" loading="lazy" />
-                          ) : (
-                            <img className="img" src="https://dummyimage.com/640x480/f4f9fd/000&text=placeholder" alt="" loading="lazy" />
-                          )
-                        }
-                        {
-                          el.img_source && <figcaption>{el.img_source}</figcaption>
-                        }
-                        <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
-                      </figure>
-                      <Markdown components={{ a: LinkRenderer }}>{el.text}</Markdown>
-                    </div>
-                    )
-                  }
-                  {
-                    el.type === 'cover' && (
+                    )}
+                    {el.type === 'cover' && (
                       <div className="content_container">
                         <div className="date_container date_container_decade">
                           <span>{el.text}</span>
@@ -246,20 +310,29 @@ function Timeline() {
                           <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
                         </div>
                       </div>
-                    )
-                  }
-                </div>
-              </SwiperSlide>
-            ))}
+                    )}
+                  </div>
+                </SwiperSlide>
+              ))}
             <div className="autoplay-progress" slot="container-end">
               <svg viewBox="0 0 48 48" ref={progressCircle}>
                 <circle cx="24" cy="24" r="20" />
               </svg>
-              <span ref={progressContent} onClick={() => { if (progressContent.current.textContent === '▶') { timer.resume(); } }} aria-label="seconds" role="presentation">5</span>
+              <span
+                ref={progressContent}
+                onClick={() => {
+                  if (progressContent.current.textContent === '▶') {
+                    timer.resume();
+                  }
+                }}
+                aria-label="seconds"
+                role="presentation"
+              >
+                5
+              </span>
             </div>
           </Swiper>
-          )
-        }
+        )}
       </div>
       <noscript>Your browser does not support JavaScript!</noscript>
     </div>
