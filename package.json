@@ -35,6 +35,6 @@
     "prop-types": "^15.8.1",
     "react-is-visible": "^1.2.0",
     "react-markdown": "^9.0.1",
-    "swiper": "^9.4.1"
+    "swiper": "^12.2.0"
   }
 }

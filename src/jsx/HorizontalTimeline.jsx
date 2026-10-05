@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/styles.less';
 
-import { A11y, Keyboard, Mousewheel, Pagination } from 'swiper';
+import { A11y, Keyboard, Mousewheel, Pagination } from 'swiper/modules';
 
 // https://v9.swiperjs.com/react
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,7 +12,7 @@ import 'intersection-observer';
 import { useIsVisible } from 'react-is-visible';
 
 // Import Swiper styles
-import 'swiper/swiper-bundle.min.css';
+import 'swiper/css/bundle';
 
 import CircleFlag from '@unctad-infovis/general-tools/components/CircleFlag.jsx';
 
